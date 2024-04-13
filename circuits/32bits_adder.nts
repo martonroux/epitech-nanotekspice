@@ -1,0 +1,144 @@
+.chipsets:
+8bits_adder 8bits_adder_01
+8bits_adder 8bits_adder_02
+8bits_adder 8bits_adder_03
+8bits_adder 8bits_adder_04
+circuit 32bits_adder
+
+.links:
+8bits_adder_01:1 32bits_adder:1 #a
+8bits_adder_01:2 32bits_adder:2 #b
+8bits_adder_01:3 32bits_adder:3 #cin
+8bits_adder_01:4 32bits_adder:4 #sum
+
+8bits_adder_01:5 32bits_adder:5 #a
+8bits_adder_01:6 32bits_adder:6 #b
+8bits_adder_01:7 32bits_adder:7 #sum
+
+8bits_adder_01:8 32bits_adder:8
+8bits_adder_01:9 32bits_adder:9
+8bits_adder_01:10 32bits_adder:10
+
+8bits_adder_01:11 32bits_adder:11
+8bits_adder_01:12 32bits_adder:12
+8bits_adder_01:13 32bits_adder:13
+
+8bits_adder_01:14 32bits_adder:14
+8bits_adder_01:15 32bits_adder:15
+8bits_adder_01:16 32bits_adder:16
+
+8bits_adder_01:17 32bits_adder:17
+8bits_adder_01:18 32bits_adder:18
+8bits_adder_01:19 32bits_adder:19
+
+8bits_adder_01:20 32bits_adder:20
+8bits_adder_01:21 32bits_adder:21
+8bits_adder_01:22 32bits_adder:22
+
+8bits_adder_01:23 32bits_adder:23
+8bits_adder_01:24 32bits_adder:24
+8bits_adder_01:25 32bits_adder:25
+
+8bits_adder_01:26 8bits_adder_02:1
+
+8bits_adder_02:2 32bits_adder:26
+8bits_adder_02:3 32bits_adder:27
+8bits_adder_02:4 32bits_adder:28
+
+8bits_adder_02:5 32bits_adder:29
+8bits_adder_02:6 32bits_adder:30
+8bits_adder_02:7 32bits_adder:31
+
+8bits_adder_02:8 32bits_adder:32
+8bits_adder_02:9 32bits_adder:33
+8bits_adder_02:10 32bits_adder:34
+
+8bits_adder_02:11 32bits_adder:35
+8bits_adder_02:12 32bits_adder:36
+8bits_adder_02:13 32bits_adder:37
+
+8bits_adder_02:14 32bits_adder:38
+8bits_adder_02:15 32bits_adder:39
+8bits_adder_02:16 32bits_adder:40
+
+8bits_adder_02:17 32bits_adder:41
+8bits_adder_02:18 32bits_adder:42
+8bits_adder_02:19 32bits_adder:43
+
+8bits_adder_02:20 32bits_adder:44
+8bits_adder_02:21 32bits_adder:45
+8bits_adder_02:22 32bits_adder:46
+
+8bits_adder_02:23 32bits_adder:47
+8bits_adder_02:24 32bits_adder:48
+8bits_adder_02:25 32bits_adder:49
+
+8bits_adder_02:26 8bits_adder_03:1
+
+8bits_adder_03:2 32bits_adder:50
+8bits_adder_03:3 32bits_adder:51
+8bits_adder_03:4 32bits_adder:52
+
+8bits_adder_03:5 32bits_adder:53
+8bits_adder_03:6 32bits_adder:54
+8bits_adder_03:7 32bits_adder:55
+
+8bits_adder_03:8 32bits_adder:56
+8bits_adder_03:9 32bits_adder:57
+8bits_adder_03:10 32bits_adder:58
+
+8bits_adder_03:11 32bits_adder:59
+8bits_adder_03:12 32bits_adder:60
+8bits_adder_03:13 32bits_adder:61
+
+8bits_adder_03:14 32bits_adder:62
+8bits_adder_03:15 32bits_adder:63
+8bits_adder_03:16 32bits_adder:64
+
+8bits_adder_03:17 32bits_adder:65
+8bits_adder_03:18 32bits_adder:66
+8bits_adder_03:19 32bits_adder:67
+
+8bits_adder_03:20 32bits_adder:68
+8bits_adder_03:21 32bits_adder:69
+8bits_adder_03:22 32bits_adder:70
+
+8bits_adder_03:23 32bits_adder:71
+8bits_adder_03:24 32bits_adder:72
+8bits_adder_03:25 32bits_adder:73
+
+8bits_adder_03:26 8bits_adder_04:1
+
+8bits_adder_04:2 32bits_adder:74
+8bits_adder_04:3 32bits_adder:75
+8bits_adder_04:4 32bits_adder:76
+
+8bits_adder_04:5 32bits_adder:77
+8bits_adder_04:6 32bits_adder:78
+8bits_adder_04:7 32bits_adder:79
+
+8bits_adder_04:8 32bits_adder:80
+8bits_adder_04:9 32bits_adder:81
+8bits_adder_04:10 32bits_adder:82
+
+8bits_adder_04:11 32bits_adder:83
+8bits_adder_04:12 32bits_adder:84
+8bits_adder_04:13 32bits_adder:85
+
+8bits_adder_04:14 32bits_adder:86
+8bits_adder_04:15 32bits_adder:87
+8bits_adder_04:16 32bits_adder:88
+
+8bits_adder_04:17 32bits_adder:89
+8bits_adder_04:18 32bits_adder:90
+8bits_adder_04:19 32bits_adder:91
+
+8bits_adder_04:20 32bits_adder:92
+8bits_adder_04:21 32bits_adder:93
+8bits_adder_04:22 32bits_adder:94
+
+8bits_adder_04:23 32bits_adder:95
+8bits_adder_04:24 32bits_adder:96
+8bits_adder_04:25 32bits_adder:97
+
+8bits_adder_04:26 32bits_adder:98

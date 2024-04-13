@@ -1,0 +1,11 @@
+.chipsets:
+and and_01
+and and_02
+circuit tri_and
+
+.links:
+and_01:1 tri_and:1
+and_01:2 tri_and:2
+and_02:1 tri_and:3
+and_02:2 and_01:3
+and_02:3 tri_and:4

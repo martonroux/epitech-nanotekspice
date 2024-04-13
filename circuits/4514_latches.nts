@@ -1,0 +1,30 @@
+.chipsets:
+d_flip_flop f_01
+d_flip_flop f_02
+d_flip_flop f_03
+d_flip_flop f_04
+false false
+circuit 4514_latches
+
+.links:
+false:1 f_01:3
+false:1 f_01:4
+false:1 f_02:3
+false:1 f_02:4
+false:1 f_03:3
+false:1 f_03:4
+false:1 f_04:3
+false:1 f_04:4
+
+f_01:1 4514_latches:1
+f_02:1 4514_latches:2
+f_03:1 4514_latches:3
+f_04:1 4514_latches:4
+f_01:2 4514_latches:5
+f_02:2 4514_latches:5
+f_03:2 4514_latches:5
+f_04:2 4514_latches:5
+f_01:6 4514_latches:6
+f_02:6 4514_latches:7
+f_03:6 4514_latches:8
+f_04:6 4514_latches:9

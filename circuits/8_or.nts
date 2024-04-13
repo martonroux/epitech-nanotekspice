@@ -1,0 +1,31 @@
+# [1, 8]    -> inputs
+# 9         -> output
+.chipsets:
+or or01
+or or02
+or or03
+or or04
+or or05
+or or06
+or or07
+
+circuit 8_or
+
+.links:
+8_or:1 or01:1
+8_or:2 or01:2
+8_or:3 or02:2
+8_or:4 or03:2
+8_or:5 or04:2
+8_or:6 or05:2
+8_or:7 or06:2
+8_or:8 or07:2
+
+or01:3 or02:1
+or02:3 or03:1
+or03:3 or04:1
+or04:3 or05:1
+or05:3 or06:1
+or06:3 or07:1
+
+8_or:9 or07:3

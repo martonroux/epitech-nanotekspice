@@ -1,0 +1,71 @@
+# SEL       -> 1
+# OE        -> 2
+# A0 - A7   -> 3 - 10
+# Q0 - Q7   -> 11 - 18
+
+.chipsets:
+and and1
+and and2
+and and3
+and and4
+and and5
+and and6
+and and7
+and and8
+
+tri_state state1
+tri_state state2
+tri_state state3
+tri_state state4
+tri_state state5
+tri_state state6
+tri_state state7
+tri_state state8
+
+circuit byte_oe
+
+.links:
+byte_oe:1 and1:1
+byte_oe:1 and2:1
+byte_oe:1 and3:1
+byte_oe:1 and4:1
+byte_oe:1 and5:1
+byte_oe:1 and6:1
+byte_oe:1 and7:1
+byte_oe:1 and8:1
+
+byte_oe:2 state1:2
+byte_oe:2 state2:2
+byte_oe:2 state3:2
+byte_oe:2 state4:2
+byte_oe:2 state5:2
+byte_oe:2 state6:2
+byte_oe:2 state7:2
+byte_oe:2 state8:2
+
+byte_oe:3 and1:2
+byte_oe:4 and2:2
+byte_oe:5 and3:2
+byte_oe:6 and4:2
+byte_oe:7 and5:2
+byte_oe:8 and6:2
+byte_oe:9 and7:2
+byte_oe:10 and8:2
+
+state1:1 and1:3
+state2:1 and2:3
+state3:1 and3:3
+state4:1 and4:3
+state5:1 and5:3
+state6:1 and6:3
+state7:1 and7:3
+state8:1 and8:3
+
+state1:3 byte_oe:11
+state2:3 byte_oe:12
+state3:3 byte_oe:13
+state4:3 byte_oe:14
+state5:3 byte_oe:15
+state6:3 byte_oe:16
+state7:3 byte_oe:17
+state8:3 byte_oe:18

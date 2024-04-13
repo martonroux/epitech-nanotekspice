@@ -1,0 +1,22 @@
+.chipsets:
+not not01
+not not02
+not not03
+not not04
+not not05
+not not06
+circuit 4069
+
+.links:
+not01:1 4069:1
+not01:2 4069:2
+not02:1 4069:3
+not02:2 4069:4
+not03:1 4069:5
+not03:2 4069:6
+not04:1 4069:9
+not04:2 4069:8
+not05:1 4069:11
+not05:2 4069:10
+not06:1 4069:13
+not06:2 4069:12

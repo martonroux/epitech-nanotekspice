@@ -1,0 +1,30 @@
+.chipsets:
+full_adder full_adder_01
+full_adder full_adder_02
+full_adder full_adder_03
+full_adder full_adder_04
+circuit 4008
+
+.links:
+full_adder_01:2 4008:6#b
+full_adder_01:1 4008:7#a
+full_adder_01:3 4008:9#cin
+#false_01:1 full_adder_01:3# cin
+full_adder_01:5 4008:10# sum
+#
+full_adder_02:1 4008:5#a
+full_adder_02:2 4008:4#b
+full_adder_02:3 full_adder_01:4#cin
+full_adder_02:5 4008:11#sum
+#
+full_adder_02:4 full_adder_03:3#cin
+full_adder_03:1 4008:3#a
+full_adder_03:2 4008:2#b
+full_adder_03:5 4008:12#sum
+#
+full_adder_04:1 4008:1#a
+full_adder_04:2 4008:15#b
+full_adder_03:4 full_adder_04:3#cin
+full_adder_04:5 4008:13#sum
+#
+full_adder_04:4 4008:14#cout

@@ -1,0 +1,19 @@
+.chipsets:
+d_flip_flop flip_flop_01
+d_flip_flop flip_flop_02
+circuit 4013
+
+.links:
+flip_flop_01:6 4013:1
+flip_flop_01:5 4013:2
+flip_flop_01:2 4013:3
+flip_flop_01:3 4013:4
+flip_flop_01:1 4013:5
+flip_flop_01:4 4013:6
+
+flip_flop_02:6 4013:13
+flip_flop_02:5 4013:12
+flip_flop_02:2 4013:11
+flip_flop_02:3 4013:10
+flip_flop_02:1 4013:9
+flip_flop_02:4 4013:8

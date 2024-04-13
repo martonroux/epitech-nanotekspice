@@ -1,0 +1,54 @@
+.chipsets:
+full_adder full_adder_01
+full_adder full_adder_02
+full_adder full_adder_03
+full_adder full_adder_04
+full_adder full_adder_05
+full_adder full_adder_06
+full_adder full_adder_07
+full_adder full_adder_08
+false false_01
+circuit 8bits_adder
+
+.links:
+full_adder_01:1 8bits_adder:1#a
+full_adder_01:2 8bits_adder:2#b
+false_01:1 full_adder_01:3# cin
+full_adder_01:5 8bits_adder:3# sum
+#
+full_adder_02:1 8bits_adder:4#a
+full_adder_02:2 8bits_adder:5#b
+full_adder_02:3 full_adder_01:4#cin
+full_adder_02:5 8bits_adder:6#sum
+#
+full_adder_02:4 full_adder_03:3#cin
+full_adder_03:1 8bits_adder:7#a
+full_adder_03:2 8bits_adder:8#b
+full_adder_03:5 8bits_adder:9#sum
+#
+full_adder_04:1 8bits_adder:10#a
+full_adder_04:2 8bits_adder:11#b
+full_adder_03:4 full_adder_04:3#cin
+full_adder_04:5 8bits_adder:12#sum
+#
+full_adder_05:1 8bits_adder:13#a
+full_adder_05:2 8bits_adder:14#b
+full_adder_04:4 full_adder_05:3#cin
+full_adder_05:5 8bits_adder:15#sum
+#
+full_adder_06:1 8bits_adder:16#a
+full_adder_06:2 8bits_adder:17#b
+full_adder_05:4 full_adder_06:3#cin
+full_adder_06:5 8bits_adder:18 #sum
+#
+full_adder_07:1 8bits_adder:19#a
+full_adder_07:2 8bits_adder:20#b
+full_adder_06:4 full_adder_07:3#cin
+full_adder_07:5 8bits_adder:21#sum
+#
+full_adder_08:1 8bits_adder:22#a
+full_adder_08:2 8bits_adder:23#b
+full_adder_07:5 full_adder_08:3#cin
+full_adder_08:5 8bits_adder:24#sum
+full_adder_08:4 8bits_adder:25#cout
+

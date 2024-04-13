@@ -1,0 +1,10 @@
+.chipsets:
+or or_01
+not nor_not
+circuit nor
+
+.links:
+or_01:3 nor_not:1
+or_01:1 nor:1
+or_01:2 nor:2
+nor_not:2 nor:3

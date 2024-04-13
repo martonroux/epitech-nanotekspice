@@ -1,0 +1,18 @@
+# half_adder
+#
+# a  1--- --- xor --- somme 4
+#          |   |
+#      /---|---/
+# b  2-- and --- retenu 3
+.chipsets:
+xor xor_01
+and and_01
+circuit half_adder
+
+.links:
+xor_01:1 half_adder:1
+and_01:1 half_adder:2
+xor_01:2 half_adder:2
+and_01:2 half_adder:1
+xor_01:3 half_adder:4
+and_01:3 half_adder:3

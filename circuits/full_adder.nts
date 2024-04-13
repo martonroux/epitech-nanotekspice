@@ -1,0 +1,24 @@
+# full adder
+#   a -> \ ----
+#              |half_adder_01 ----- \--------- or -- retenu 4
+#         | ----                |           |
+#   b -> /                       /--        |
+#                                 |-half_adder_02-- somme 5
+#   c -> \ -------------------------
+
+
+.chipsets:
+half_adder half_01
+half_adder half_02
+or or_01
+circuit full_adder
+
+.links:
+half_01:1 full_adder:1
+half_01:2 full_adder:2
+half_02:2 full_adder:3
+half_02:1 half_01:4
+or_01:1 half_01:3
+or_01:2 half_02:3
+or_01:3 full_adder:4
+half_02:4 full_adder:5

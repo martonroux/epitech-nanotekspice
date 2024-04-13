@@ -1,0 +1,46 @@
+# data      -1->-+
+# clock     -2->-+----5-> QB
+# clear     -3->-+----6-> Q
+# preset    -4->-+
+
+.chipsets:
+tri_nand tri_nand_01
+tri_nand tri_nand_02
+tri_nand tri_nand_03
+tri_nand tri_nand_04
+tri_nand tri_nand_05
+tri_nand tri_nand_06
+not not_clear
+not not_preset
+circuit d_flip_flop
+
+.links:
+not_clear:1 d_flip_flop:3
+not_preset:1 d_flip_flop:4
+
+tri_nand_01:1 tri_nand_02:4
+tri_nand_01:2 not_clear:2
+tri_nand_01:3 d_flip_flop:1
+
+tri_nand_02:1 tri_nand_03:4
+tri_nand_02:2 d_flip_flop:2
+tri_nand_02:3 tri_nand_01:4
+
+tri_nand_03:1 tri_nand_04:4
+tri_nand_03:2 not_clear:2
+tri_nand_03:3 d_flip_flop:2
+
+tri_nand_04:1 not_preset:2
+tri_nand_04:2 tri_nand_01:4
+tri_nand_04:3 tri_nand_03:4
+
+tri_nand_05:1 tri_nand_06:4
+tri_nand_05:2 not_clear:2
+tri_nand_05:3 tri_nand_02:4
+
+tri_nand_06:1 not_preset:2
+tri_nand_06:2 tri_nand_03:4
+tri_nand_06:3 tri_nand_05:4
+
+tri_nand_06:4 d_flip_flop:6
+tri_nand_05:4 d_flip_flop:5

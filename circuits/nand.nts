@@ -1,0 +1,10 @@
+.chipsets:
+and and_01
+not not_01
+circuit nand
+
+.links:
+and_01:1 nand:1
+and_01:2 nand:2
+not_01:1 and_01:3
+not_01:2 nand:3

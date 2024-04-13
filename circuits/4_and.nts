@@ -1,0 +1,19 @@
+.chipsets:
+and and_01
+and and_02
+and and_03
+circuit 4_and
+true t1
+output o1
+output o2
+
+.links:
+o1:1 4_and:1
+o2:1 4_and:2
+and_01:1 4_and:1
+and_01:2 4_and:2
+and_02:1 4_and:3
+and_02:2 4_and:4
+and_01:3 and_03:1
+and_02:3 and_03:2
+and_03:3 4_and:5

@@ -1,0 +1,77 @@
+# A0        -> 1
+# A1        -> 2
+# A2        -> 3
+# A3        -> 4
+# A4        -> 5
+# A5        -> 6
+# A6        -> 7
+# A7        -> 8
+# Clock     -> 9
+# Q0        -> 10
+# Q1        -> 11
+# Q2        -> 12
+# Q3        -> 13
+# Q4        -> 14
+# Q5        -> 15
+# Q6        -> 16
+# Q7        -> 17
+
+.chipsets:
+
+d_flip_flop fl1
+d_flip_flop fl2
+d_flip_flop fl3
+d_flip_flop fl4
+d_flip_flop fl5
+d_flip_flop fl6
+d_flip_flop fl7
+d_flip_flop fl8
+
+false const
+
+circuit ram_byte
+
+.links:
+ram_byte:1 fl1:1
+ram_byte:2 fl2:1
+ram_byte:3 fl3:1
+ram_byte:4 fl4:1
+ram_byte:5 fl5:1
+ram_byte:6 fl6:1
+ram_byte:7 fl7:1
+ram_byte:8 fl8:1
+
+ram_byte:9 fl1:2
+ram_byte:9 fl2:2
+ram_byte:9 fl3:2
+ram_byte:9 fl4:2
+ram_byte:9 fl5:2
+ram_byte:9 fl6:2
+ram_byte:9 fl7:2
+ram_byte:9 fl8:2
+
+const:1 fl1:3
+const:1 fl1:4
+const:1 fl2:3
+const:1 fl2:4
+const:1 fl3:3
+const:1 fl3:4
+const:1 fl4:3
+const:1 fl4:4
+const:1 fl5:3
+const:1 fl5:4
+const:1 fl6:3
+const:1 fl6:4
+const:1 fl7:3
+const:1 fl7:4
+const:1 fl8:3
+const:1 fl8:4
+
+ram_byte:10 fl1:6
+ram_byte:11 fl2:6
+ram_byte:12 fl3:6
+ram_byte:13 fl4:6
+ram_byte:14 fl5:6
+ram_byte:15 fl6:6
+ram_byte:16 fl7:6
+ram_byte:17 fl8:6

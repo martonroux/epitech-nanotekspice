@@ -1,0 +1,105 @@
+.chipsets:
+
+rs_flip_flop d1
+rs_flip_flop d2
+rs_flip_flop d3
+rs_flip_flop d4
+rs_flip_flop d5
+rs_flip_flop d6
+rs_flip_flop d7
+rs_flip_flop d8
+rs_flip_flop d9
+rs_flip_flop d10
+rs_flip_flop d11
+rs_flip_flop d12
+rs_flip_flop d13
+rs_flip_flop d14
+rs_flip_flop d15
+rs_flip_flop d16
+rs_flip_flop d17
+and a1
+and a2
+and a3
+and a4
+and a5
+and a6
+and a7
+and a8
+not n1
+circuit 4094
+
+.links:
+n1:1 4094:3
+n1:2 d1:2
+n1:2 d2:2
+n1:2 d3:2
+n1:2 d4:2
+n1:2 d5:2
+n1:2 d6:2
+n1:2 d7:2
+n1:2 d8:2
+
+4094:10 d9:4
+d9:2 d1:4
+d9:1 d8:4
+
+4094:2 d1:1
+d2:1 d1:4
+d3:1 d2:4
+d4:1 d3:4
+d5:1 d4:4
+d6:1 d5:4
+d7:1 d6:4
+d8:1 d7:4
+
+#link d8 to QS
+4094:9 d8:4
+
+#link all strobe to the other flip-flops clock position
+d10:2 4094:1
+d11:2 4094:1
+d12:2 4094:1
+d13:2 4094:1
+d14:2 4094:1
+d15:2 4094:1
+d16:2 4094:1
+d17:2 4094:1
+
+#link all Q dflip flop to other d flip-flop
+d10:1 d1:4
+d11:1 d2:4
+d12:1 d3:4
+d13:1 d4:4
+d14:1 d5:4
+d15:1 d6:4
+d16:1 d7:4
+d17:1 d8:4
+
+a1:1 d10:4
+a2:1 d11:4
+a3:1 d12:4
+a4:1 d13:4
+a5:1 d14:4
+a6:1 d15:4
+a7:1 d16:4
+a8:1 d17:4
+
+#link all and to enable
+a1:2 4094:15
+a2:2 4094:15
+a3:2 4094:15
+a4:2 4094:15
+a5:2 4094:15
+a6:2 4094:15
+a7:2 4094:15
+a8:2 4094:15
+
+#link all and to circuit
+4094:4 a1:3
+4094:5 a2:3
+4094:6 a3:3
+4094:7 a4:3
+4094:14 a5:3
+4094:13 a6:3
+4094:12 a7:3
+4094:11 a8:3

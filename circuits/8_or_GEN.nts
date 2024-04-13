@@ -1,0 +1,26 @@
+.chipsets:
+circuit 8_or_GEN
+or or_0
+or or_1
+or or_2
+or or_3
+or or_4
+or or_5
+or or_6
+
+.links:
+8_or_GEN:1 or_0:1
+8_or_GEN:2 or_0:2
+8_or_GEN:3 or_1:2
+or_0:3 or_1:1
+8_or_GEN:4 or_2:2
+or_1:3 or_2:1
+8_or_GEN:5 or_3:2
+or_2:3 or_3:1
+8_or_GEN:6 or_4:2
+or_3:3 or_4:1
+8_or_GEN:7 or_5:2
+or_4:3 or_5:1
+8_or_GEN:8 or_6:2
+or_5:3 or_6:1
+or_6:3 8_or_GEN:9

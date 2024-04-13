@@ -1,0 +1,80 @@
+# X0        -> 1
+# X1        -> 2
+# X2        -> 3
+# X3        -> 4
+# X4        -> 5
+# X5        -> 6
+# X6        -> 7
+# X7        -> 9
+# Inhibit   -> 10
+# A         -> 11
+# B         -> 12
+# C         -> 13
+# OUT       -> 14
+# OE        -> 15
+
+.chipsets:
+3_to_8_decoder decoder
+tri_state tri_state
+8_or 8_or
+
+not oe_not
+not inhibit_not
+and inhibit_and
+
+and and01
+and and02
+and and03
+and and04
+and and05
+and and06
+and and07
+and and08
+
+circuit 4512
+
+.links:
+decoder:1 4512:11
+decoder:2 4512:12
+decoder:3 4512:13
+
+and01:1 4512:1
+and01:2 decoder:4
+and01:3 8_or:1
+
+and02:1 4512:2
+and02:2 decoder:5
+and02:3 8_or:2
+
+and03:1 4512:3
+and03:2 decoder:6
+and03:3 8_or:3
+
+and04:1 4512:4
+and04:2 decoder:7
+and04:3 8_or:4
+
+and05:1 4512:5
+and05:2 decoder:8
+and05:3 8_or:5
+
+and06:1 4512:6
+and06:2 decoder:9
+and06:3 8_or:6
+
+and07:1 4512:7
+and07:2 decoder:10
+and07:3 8_or:7
+
+and08:1 4512:9
+and08:2 decoder:11
+and08:3 8_or:8
+
+oe_not:1 4512:15
+oe_not:2 tri_state:2
+inhibit_and:3 tri_state:1
+tri_state:3 4512:14
+
+inhibit_not:1 4512:10
+inhibit_not:2 inhibit_and:1
+inhibit_and:2 8_or:9

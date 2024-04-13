@@ -1,0 +1,85 @@
+# Q12           -> 1
+# Q6            -> 2
+# Q5            -> 3
+# Q7            -> 4
+# Q4            -> 5
+# Q3            -> 6
+# Q2            -> 7
+# Q1            -> 9
+# clock         -> 10
+# reset         -> 11
+# Q9            -> 12
+# Q8            -> 13
+# Q10           -> 14
+# Q11           -> 15
+
+
+.chipsets:
+1bit_counter c1
+1bit_counter c2
+1bit_counter c3
+1bit_counter c4
+1bit_counter c5
+1bit_counter c6
+1bit_counter c7
+1bit_counter c8
+1bit_counter c9
+1bit_counter c10
+1bit_counter c11
+1bit_counter c12
+
+not cl_not
+
+circuit 4040
+
+.links:
+
+cl_not:1 4040:10
+
+c1:1 cl_not:2
+c1:2 4040:11
+c1:3 4040:9
+c1:4 c2:1
+
+c2:2 4040:11
+c2:3 4040:7
+c2:4 c3:1
+
+c3:2 4040:11
+c3:3 4040:6
+c3:4 c4:1
+
+c4:2 4040:11
+c4:3 4040:5
+c4:4 c5:1
+
+c5:2 4040:11
+c5:3 4040:3
+c5:4 c6:1
+
+c6:2 4040:11
+c6:3 4040:2
+c6:4 c7:1
+
+c7:2 4040:11
+c7:3 4040:4
+c7:4 c8:1
+
+c8:2 4040:11
+c8:3 4040:13
+c8:4 c9:1
+
+c9:2 4040:11
+c9:3 4040:12
+c9:4 c10:1
+
+c10:2 4040:11
+c10:3 4040:14
+c10:4 c11:1
+
+c11:2 4040:11
+c11:3 4040:15
+c11:4 c12:1
+
+c12:2 4040:11
+c12:3 4040:1

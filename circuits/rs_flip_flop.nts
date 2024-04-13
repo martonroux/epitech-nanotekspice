@@ -1,0 +1,14 @@
+# 1SBAR, 2RBAR, 3Q, 4QBAR
+
+.chipsets:
+nor nor_01
+nor nor_02
+circuit rs_flip_flop
+
+.links:
+nor_01:1 rs_flip_flop:1
+nor_02:2 rs_flip_flop:2
+nor_01:2 nor_02:3
+nor_02:1 nor_01:3
+nor_01:3 rs_flip_flop:3
+nor_02:3 rs_flip_flop:4

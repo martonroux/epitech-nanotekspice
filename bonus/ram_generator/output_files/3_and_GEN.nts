@@ -1,0 +1,11 @@
+.chipsets:
+circuit 3_and_GEN
+and and_0
+and and_1
+
+.links:
+3_and_GEN:1 and_0:1
+3_and_GEN:2 and_0:2
+3_and_GEN:3 and_1:2
+and_0:3 and_1:1
+and_1:3 3_and_GEN:4

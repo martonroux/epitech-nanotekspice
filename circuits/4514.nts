@@ -1,0 +1,39 @@
+.chipsets:
+4514_latches latch
+4_to_16_decoder decoder_01
+circuit 4514
+
+.links:
+latch:5 4514:1
+latch:1 4514:22
+latch:2 4514:21
+latch:3 4514:3
+latch:4 4514:2
+
+#latch:1 4514:2
+#latch:2 4514:3
+#latch:3 4514:21
+#latch:4 4514:22
+
+decoder_01:1 latch:6
+decoder_01:2 latch:7
+decoder_01:3 latch:8
+decoder_01:4 latch:9
+decoder_01:5 4514:23
+
+decoder_01:6 4514:11
+decoder_01:7 4514:9
+decoder_01:8 4514:10
+decoder_01:9 4514:8
+decoder_01:10 4514:7
+decoder_01:11 4514:6
+decoder_01:12 4514:5
+decoder_01:13 4514:4
+decoder_01:14 4514:18
+decoder_01:15 4514:17
+decoder_01:16 4514:20
+decoder_01:17 4514:19
+decoder_01:18 4514:14
+decoder_01:19 4514:13
+decoder_01:20 4514:16
+decoder_01:21 4514:15

@@ -1,0 +1,11 @@
+.chipsets:
+tri_and tri_and
+not not
+circuit tri_nand
+
+.links:
+tri_and:1 tri_nand:1
+tri_and:2 tri_nand:2
+tri_and:3 tri_nand:3
+tri_and:4 not:1
+not:2 tri_nand:4

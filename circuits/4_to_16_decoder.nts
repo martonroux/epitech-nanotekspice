@@ -1,0 +1,196 @@
+.chipsets:
+not n_01
+not n_02
+not n_03
+not n_04
+
+true t_01
+
+4_and and_01
+4_and and_02
+4_and and_03
+4_and and_04
+4_and and_05
+4_and and_06
+4_and and_07
+4_and and_08
+4_and and_09
+4_and and_10
+4_and and_11
+4_and and_12
+4_and and_13
+4_and and_14
+4_and and_15
+4_and and_16
+
+and a_01
+and a_02
+and a_03
+and a_04
+and a_05
+and a_06
+and a_07
+and a_08
+and a_09
+and a_10
+and a_11
+and a_12
+and a_13
+and a_14
+and a_15
+and a_16
+
+inhibit i_01
+inhibit i_02
+inhibit i_03
+inhibit i_04
+inhibit i_05
+inhibit i_06
+inhibit i_07
+inhibit i_08
+inhibit i_09
+inhibit i_10
+inhibit i_11
+inhibit i_12
+inhibit i_13
+inhibit i_14
+inhibit i_15
+inhibit i_16
+
+circuit 4_to_16_decoder
+
+.links:
+n_01:1 4_to_16_decoder:1
+n_02:1 4_to_16_decoder:2
+n_03:1 4_to_16_decoder:3
+n_04:1 4_to_16_decoder:4
+
+i_01:3 4_to_16_decoder:6
+i_02:3 4_to_16_decoder:7
+i_03:3 4_to_16_decoder:8
+i_04:3 4_to_16_decoder:9
+i_05:3 4_to_16_decoder:10
+i_06:3 4_to_16_decoder:11
+i_07:3 4_to_16_decoder:12
+i_08:3 4_to_16_decoder:13
+i_09:3 4_to_16_decoder:14
+i_10:3 4_to_16_decoder:15
+i_11:3 4_to_16_decoder:16
+i_12:3 4_to_16_decoder:17
+i_13:3 4_to_16_decoder:18
+i_14:3 4_to_16_decoder:19
+i_15:3 4_to_16_decoder:20
+i_16:3 4_to_16_decoder:21
+
+i_01:2 4_to_16_decoder:5
+i_02:2 4_to_16_decoder:5
+i_03:2 4_to_16_decoder:5
+i_04:2 4_to_16_decoder:5
+i_05:2 4_to_16_decoder:5
+i_06:2 4_to_16_decoder:5
+i_07:2 4_to_16_decoder:5
+i_08:2 4_to_16_decoder:5
+i_09:2 4_to_16_decoder:5
+i_10:2 4_to_16_decoder:5
+i_11:2 4_to_16_decoder:5
+i_12:2 4_to_16_decoder:5
+i_13:2 4_to_16_decoder:5
+i_14:2 4_to_16_decoder:5
+i_15:2 4_to_16_decoder:5
+i_16:2 4_to_16_decoder:5
+
+i_01:1 and_01:5
+and_01:1 n_01:2
+and_01:2 n_02:2
+and_01:3 n_03:2
+and_01:4 n_04:2
+
+i_02:1 and_02:5
+and_02:1 n_01:2
+and_02:2 n_02:2
+and_02:3 n_03:2
+and_02:4 4_to_16_decoder:4
+
+i_03:1 and_03:5
+and_03:1 n_01:2
+and_03:2 n_02:2
+and_03:3 4_to_16_decoder:3
+and_03:4 n_04:2
+
+i_04:1 and_04:5
+and_04:1 n_01:2
+and_04:2 n_02:2
+and_04:3 4_to_16_decoder:3
+and_04:4 4_to_16_decoder:4
+
+i_05:1 and_05:5
+and_05:1 n_01:2
+and_05:2 4_to_16_decoder:2
+and_05:3 n_03:2
+and_05:4 n_04:2
+
+i_06:1 and_06:5
+and_06:1 n_01:2
+and_06:2 4_to_16_decoder:2
+and_06:3 n_03:2
+and_06:4 4_to_16_decoder:4
+
+i_07:1 and_07:5
+and_07:1 n_01:2
+and_07:2 4_to_16_decoder:2
+and_07:3 4_to_16_decoder:3
+and_07:4 n_03:2
+
+i_08:1 and_08:5
+and_08:1 n_01:2
+and_08:2 4_to_16_decoder:2
+and_08:3 4_to_16_decoder:3
+and_08:4 4_to_16_decoder:4
+
+i_09:1 and_09:5
+and_09:1 4_to_16_decoder:1
+and_09:2 n_01:2
+and_09:3 n_03:2
+and_09:4 n_04:2
+
+i_10:1 and_10:5
+and_10:1 4_to_16_decoder:1
+and_10:2 n_02:2
+and_10:3 n_03:2
+and_10:4 4_to_16_decoder:4
+
+i_11:1 and_11:5
+and_11:1 4_to_16_decoder:1
+and_11:2 n_02:2
+and_11:3 4_to_16_decoder:3
+and_11:4 n_04:2
+
+i_12:1 and_12:5
+and_12:1 4_to_16_decoder:1
+and_12:2 n_02:2
+and_12:3 4_to_16_decoder:3
+and_12:4 4_to_16_decoder:4
+
+i_13:1 and_13:5
+and_13:1 4_to_16_decoder:1
+and_13:2 4_to_16_decoder:2
+and_13:3 n_03:2
+and_13:4 n_04:2
+
+i_14:1 and_14:5
+and_14:1 4_to_16_decoder:1
+and_14:2 4_to_16_decoder:2
+and_14:3 n_03:2
+and_14:4 4_to_16_decoder:4
+
+i_15:1 and_15:5
+and_15:1 4_to_16_decoder:1
+and_15:2 4_to_16_decoder:2
+and_15:3 4_to_16_decoder:3
+and_15:4 n_04:2
+
+i_16:1 and_16:5
+and_16:1 4_to_16_decoder:1
+and_16:2 4_to_16_decoder:2
+and_16:3 4_to_16_decoder:3
+and_16:4 4_to_16_decoder:4

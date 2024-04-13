@@ -1,0 +1,20 @@
+# used for 4040 (12 bit counter)
+# clock             -> 1
+# reset             -> 2
+# Q                 -> 3
+# QB                -> 4
+
+.chipsets:
+d_flip_flop flipflop
+false false
+circuit 1bit_counter
+
+.links:
+flipflop:1 flipflop:5
+
+false:1 flipflop:4
+
+flipflop:2 1bit_counter:1
+flipflop:3 1bit_counter:2
+flipflop:5 1bit_counter:4
+flipflop:6 1bit_counter:3

@@ -1,0 +1,20 @@
+.chipsets:
+nand nand_01
+nand nand_02
+nand nand_03
+nand nand_04
+circuit 4011
+
+.links:
+nand_01:1 4011:1
+nand_01:2 4011:2
+nand_01:3 4011:3
+nand_02:1 4011:5
+nand_02:2 4011:6
+nand_02:3 4011:4
+nand_03:1 4011:8
+nand_03:2 4011:9
+nand_03:3 4011:10
+nand_04:1 4011:12
+nand_04:2 4011:13
+nand_04:3 4011:11

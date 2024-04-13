@@ -1,0 +1,16 @@
+# Tri state. Returns Undefined if OE is 0
+# data      -> 1
+# OE        -> 2
+# output    -> 3
+
+.chipsets:
+
+tri_state state
+not not
+circuit inverse_tri_state
+
+.links:
+not:2 state:2
+not:1 inverse_tri_state:2
+inverse_tri_state:1 state:1
+inverse_tri_state:3 state:3
