@@ -214,8 +214,8 @@ time it is called. If its value is Undefined, it stays so.
 #### Input Value Setting
 
 You can set input components values with the ``[input]=[val]`` command. Values  
-can be either 0, 1, or U (Undefined). ``[input]`` is the name of the input  
-component that you want to modify. They can be of types:
+can be either 0, 1, or U (Undefined). Undefined is the default value. ``[input]``  
+is the name of the input component that you want to modify. They can be of types:  
 - input
 - clock
 
