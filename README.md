@@ -158,7 +158,16 @@ not_01:2 nand:3
 As you can see, we no longer have input and output components. What we have instead  
 is a ``ciruit`` component. It is essentially used by the program to understand  
 that this circuit is meant to be used inside of other circuits, and that IO  
-components from this circuit can be excluded.
+components from this circuit can be excluded.  
+
+To let the program know which pin corresponds to what, in the ``.links:`` part,  
+you have to link the components inside to the circuit like you would for IO  
+components. In our example, the and gate has both its inputs connected to the  
+nand circuit:  
+```
+and_01:1 nand:1
+and_01:2 nand:2
+```
 
 In order to use this component elsewhere in your NTS files, you have to follow  
 3 rules:
@@ -166,3 +175,63 @@ In order to use this component elsewhere in your NTS files, you have to follow
 - The name of the NTS file HAS to be of this format: ``[circuit_name].nts``
 - The NTS file HAS to be placed in the ``/circuits`` folder at the root of the repo.
 
+You can find other examples in the ``/circuits`` folder.
+
+### Launching the program
+
+Now comes the fun part. Launch the program using  
+``mkdir build && cd build && cmake .. && cmake --build .``  
+``./nanotekspice [file.nts]``
+
+An example of nts file is given in the ``/assets`` folder.  
+If you compile like the example given just above, you shouldn't have any  
+problem with the ``/circuits`` folder being at the root of the repo. However,  
+if you do, you can just copy it to the folder where the executable is.
+
+#### Runtime Commands
+
+During runtime, you will have several commands to use the program. Here is a  
+list:
+- ``display``
+- ``simulate``
+- ``[input]=[val]``
+- ``loop``
+- ``debug``
+
+#### Display
+
+The ``display`` command is used to display IO component values at the current  
+state.
+
+#### Simulate
+
+The ``simulate`` command will simulate a 'tick' on the circuit. Basically, it  
+will pass through the values that you modified earlier.  
+Clocks have a special behavior when simulate is called. If the user set the  
+clock's value to 0 or 1, the simulate command will change it to 1 or 0 each  
+time it is called. If its value is Undefined, it stays so.
+
+#### Input Value Setting
+
+You can set input components values with the ``[input]=[val]`` command. Values  
+can be either 0, 1, or U (Undefined). ``[input]`` is the name of the input  
+component that you want to modify. They can be of types:
+- input
+- clock
+
+#### Loop
+
+The Loop command will run ``simulate > display > simulate > display ...`` over  
+and over until you stop it with ctrl+D or ctrl+C.
+
+#### Debug
+
+This command displays input pin values of nested circuits. So for example, if  
+your circuit has a nand circuit nested inside, then the debug command will show  
+the value that is stored in each input pin of the nand component. This command  
+works recursively on all nested circuits.
+
+### And now, just have fun!
+
+There isn't much more to explain. There are lots of available components in  
+the ``/circuits`` folder. Feel free to use them and add more!

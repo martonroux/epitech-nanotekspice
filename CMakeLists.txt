@@ -6,6 +6,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -Wall -Wextra -Werror")
 
 include_directories(include)
 
+execute_process(COMMAND cp -r ../circuits ./circuits)
+
 add_executable(nanotekspice
         include/components/elementary/AndComponent.hpp
         include/components/elementary/LogicComponent.hpp
